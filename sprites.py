@@ -8,7 +8,7 @@ Instead of returning a SpriteList just return a texture pair list which contains
 
 """
 
-def process_sprite(path: str, dims: list[tuple[int, int, int, int]], scaling: float):
+def process_sprite(path: str, dims: list[tuple[int, int, int, int]]):
     texture_list: list[list[arcade.Texture]] = []
 
     for dim in dims:
@@ -35,12 +35,12 @@ PLAYER_RUN = [
 
 PLAYER_JUMP = [
     ".\\assets\\spritesheets\\player\\Astronaut_Jump.png",
-    [(x, 0, 24, 24) for x in range(0, 121, 24)]
+    [(x, 0, 24, 24) for x in range(0, 97, 24)]
 ]
 
 PLAYER_DEATH = [
     ".\\assets\\spritesheets\\player\\Astronaut_Death.png",
-    [(x, 0, 24, 24) for x in range(0, 121, 24)]
+    [(x, 0, 24, 24) for x in range(0, (24*3)+1, 24)]
 ]
 
 # =================== ENEMY BOTS ========================
